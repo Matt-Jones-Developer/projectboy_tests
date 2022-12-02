@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.header {
+    margin: auto;
+    text-align: center;
+    font-size: 42px;
+}
+
+.section {
+    margin: 0 auto;
+}
+
+.gb_fullsize {
+    margin: 0 auto;
+    z-index: 99;
+}
+
+.section .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

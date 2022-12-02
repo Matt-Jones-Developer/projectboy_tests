@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>projectboy slides</title>
+</head>
+<body>
+    <!-- help! -->
+    <h1>sliding 'grid reel'?!</h1>
+    <p>Create a carousel -infinite scroll on load and then..</p>
+    <p>When left pressed -> go right, when right pressed go left - is this possible without JS?</p>
+    <p>These can be two independent animations and don't have to work together.</p>
+    <p>The infinite one is more just for future reference!</p> 
+    
+    <!-- full size GB - remove!! -->
+    <!-- <div class="gb_system">
+        <img src="./img/gameboy-bg.png" alt="">
+    </div> -->
+
+    <!--  flex container for centralization? -->
+    <div class="section">
+        <div class="flex-container">
+            <div class="gb_system">
+                <img src="./img/gameboy-bg.png" alt="" id="gb">
+            </div>
+            <!-- frame test -->
+            <!-- <div class="test_frame">
+                <div class="inner"></div>
+            </div> -->
+            <div class="grid-container">
+                <!-- griddyup! -->
+                <div class="grid-item">
+                    <img src="./img/gameboy_assets_site copy.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./img/python_logo copy.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./img/rock_paper_knife_loader copy.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./img/survey_shot copy.png" alt="">
+                </div>
+                <div class="grid-item">
+                    <img src="./img/ultimate_study_guide_screenshot copy.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- separate controls to move grid manually left or right ? -->
+        <!-- Basic javascriot? -->
+        <div class="controls">
+            <!-- buttons -->
+            <div class="lnr">
+                <button class="left" onclick="slideRight">L</button>
+                <button class="right" onclick="slideLeft">R</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

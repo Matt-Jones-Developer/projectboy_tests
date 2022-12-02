@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+button {
+    font-size: x-large;
+    font-weight: bold;
+    padding: 7px 14px;
+    box-shadow: 7px 5px 3px;
+    width: 100px;
+    height: 100px;
+}
+
+/* make this for a trackpad 'tap' also? */
+button:active {
+    vertical-align: top;
+    padding: 10px 15px 5px;
+}
+
+/* translateX anim */
+
+/* functionality:
+
+1. I want this carousel to loop through continuously
+2. be affected 'left or right' one image at a time,  per button click */
+
+/* infinite (tester */
+@keyframes slideRightInfinite-2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-375px);
+    }
+    100% {
+        transform: translateX(-750px);
+    }
+}
+
+@keyframes slideRightInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-375px);
+    }
+}
+
+/* for buttons? */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-375px);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(375px);
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    border: 3px solid yellow;
+}
+
+.header {
+    margin: auto;
+    text-align: center;
+    font-size: 42px;
+}
+
+/* flex it */
+.section {
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+.flex-container {
+    margin-top: 2rem;
+}
+
+.section .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gb_system {
+    position: relative;
+    top: -226px;
+    left: 46px;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 99;
+    /* border: 1px solid red; */
+}
+
+/* styled outside a div via its ID only */
+#gb {
+    position: absolute;
+    top: 50px;
+    left: 400px;
+    width: 920px;
+    height: 1000px;
+
+}
+
+/* grid  section*/
+
+.grid-container {
+    /* position images within frame/center screen? */
+    position: relative;
+    top: 100px;
+    left: 0;
+    /* grid */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 300px;
+    gap: 75px;
+
+    /*  just basic infinite slide (test) */
+    animation: slideRightInfinite 3s infinite;
+}
+
+/* carousel items */
+.grid-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* left and right buttons  */
+.controls {
+    margin-top: 4rem;
+    padding: 4rem;
+    text-align: center;
+}
+
+.lnr {
+    margin-top: 8rem;
+}
+
+/* not sure what I am doing here haha */
+.left {
+    animation: slideRight 1s;
+}
+
+.right {
+    animation: slideLeft 1s;
+}
+
+/* Q: when using position - how do we keep them centered? */
+/*  needs to conform to flex like the buttons */
+/* .test_frame {
+    width: 460px;
+    height: 440px;
+    border: 5px solid rgb(0, 255, 17);
+    border-radius: 1rem;
+    position: absolute;
+    left: 568px;
+    top: 137px;
+    z-index: 2;
+} */
+
+/* .inner {
+    Q: when using position - how do we keep them centered?
+    width: 305px;
+    height: 307px;
+    border: 5px solid rgb(0, 255, 81);
+    border-radius: 1rem;
+    position: absolute;
+    left: 73px;
+    top: 65px;
+    z-index: 2;
+} */
